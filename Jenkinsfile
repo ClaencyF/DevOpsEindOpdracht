@@ -27,7 +27,7 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				 sh 'ng test --watch false'
+				 sh 'npm test'
             }
 		}
 	}
