@@ -24,5 +24,6 @@ pipeline {
 				echo "Testing the solution."
                 sh 'npm run test'
             }
-    }
+		}
+	}
 }
