@@ -5,6 +5,8 @@ pipeline {
             args '-p 3000:3000' 
         }
     }
+	
+	tools {nodejs "node"}
     stages {
         stage('Init') { 
             steps {
@@ -22,7 +24,6 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				sh 'npm run all-lint' 
 				sh 'npm test'
             }
 		}
