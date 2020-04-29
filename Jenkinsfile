@@ -10,7 +10,6 @@ pipeline {
             steps {
 				echo "Installing dependencies."
                 sh 'npm install' 
-				node --version
             }
         }
 		  stage('Build') { 
