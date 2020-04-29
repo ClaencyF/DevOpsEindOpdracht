@@ -14,20 +14,20 @@ pipeline {
         stage('Init') { 
             steps {
 				echo "Installing dependencies."
-                sh 'npm install' 
+               
             }
         }
 		  stage('Build') { 
             steps {
 				echo "Building the solution."
-                sh 'npm run build'
+               
             }
         }
 		
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				 
+				sh 'npm test'
             }
 		}
 	}
