@@ -27,7 +27,7 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				 sh './jenkins/scripts/test.sh'
+				 sh 'ng test --watch false'
             }
 		}
 	}
