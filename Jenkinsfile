@@ -6,9 +6,17 @@ pipeline {
         }
     }
     stages {
-        stage('Build') { 
+        stage('Init') { 
             steps {
+				echo "Installing dependencies."
                 sh 'npm install' 
+				node --version
+            }
+        }
+		  stage('Build') { 
+            steps {
+				echo "Building the solution."
+                npm run build
             }
         }
     }
