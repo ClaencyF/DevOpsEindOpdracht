@@ -1,9 +1,9 @@
 pipeline {
-    agent { docker { image 'ruby' } }
+    agent { docker { image 'node:6.3' } }
     stages {
         stage('build') {
             steps {
-                sh 'ruby --version'
+                sh 'npm --version'
             }
         }
     }
