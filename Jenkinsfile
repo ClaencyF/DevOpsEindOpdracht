@@ -27,10 +27,11 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				 sh ('./node_modules/karma/bin/karma start karma.conf.js')
+				 
             }
 		}
 	}
+	
 	
 	 post {  
 
