@@ -22,12 +22,11 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-                
+				sh 'npm run all-lint' 
+				sh 'npm test'
             }
 		}
 	}
-	
-	
 	
 	 post {  
 
