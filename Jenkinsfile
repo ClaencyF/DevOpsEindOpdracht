@@ -15,7 +15,7 @@ pipeline {
 		  stage('Build') { 
             steps {
 				echo "Building the solution."
-                npm run build
+                sh 'npm run build'
             }
         }
     }
