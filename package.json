@@ -7,6 +7,7 @@
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
+    "test-jenkins": "JUNIT_REPORT_PATH=/report.xml mocha --colors --reporter mocha-jenkins-reporter",
     "e2e": "ng e2e"
   },
   "private": true,
@@ -22,7 +23,8 @@
     "bootstrap": "^4.4.1",
     "rxjs": "~6.4.0",
     "tslib": "^1.10.0",
-    "zone.js": "~0.9.1"
+    "zone.js": "~0.9.1",
+    "mocha-jenkins-reporter": "0.4.3"
   },
   "devDependencies": {
     "@angular-devkit/build-angular": "~0.803.19",

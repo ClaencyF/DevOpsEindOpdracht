@@ -27,8 +27,7 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				sh 'npm prune'
-				// sh 'npm test --watchAll=false'
+				sh 'npm run test-jenkins'
             }
 		}
 	}
