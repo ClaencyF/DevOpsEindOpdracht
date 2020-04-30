@@ -36,7 +36,7 @@ module.exports = function (config) {
         ]
       }
     },
-    browsers: ['chromium-browser'],
+    browsers: ['ChromeHeadless'],
     singleRun: true,
     restartOnFileChange: true
   });
