@@ -14,13 +14,13 @@ pipeline {
         stage('Init') { 
             steps {
 				echo "Installing dependencies."
-               
+				sh 'npm install'
             }
         }
 		  stage('Build') { 
             steps {
 				echo "Building the solution."
-               
+				sh 'npm build'
             }
         }
 		
