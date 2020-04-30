@@ -1,7 +1,7 @@
 pipeline {
     agent {
         docker {
-            image 'node:14.0.0-alpine3.11' 
+            image 'zenika/alpine-chrome' 
             args '-p 3000:3000' 
         }
     }
@@ -28,7 +28,7 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				sh 'npm test'
+				sh 'npm test --no-sandbox'
             }
 		}
 	}
