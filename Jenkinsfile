@@ -1,11 +1,10 @@
 pipeline {
     agent {
-        docker { dockerfile true  }
+        dockerfile true
     }
 	
 	environment {
         CI = 'true' 
-		CHROME_BIN = 
     }
 
     stages {
