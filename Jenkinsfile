@@ -1,6 +1,9 @@
 pipeline {
     agent {
-        dockerfile true
+        docker { 
+		image:node14.0.0-alpine
+		args -p 3000:3000
+		}
     }
 	
 	environment {
@@ -25,7 +28,7 @@ pipeline {
             steps {
 				echo "Testing the solution."
 				sh 'npm prune'
-				sh 'npm test'
+				sh 'npm test --watchAll=false'
             }
 		}
 	}
