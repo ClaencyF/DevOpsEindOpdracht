@@ -1,13 +1,14 @@
 pipeline {
     agent {
         docker {
-            image 'angular/ngcontainer' 
+            image 'node:14.0.0-alpine3.11' 
             args '-p 3000:3000' 
         }
     }
 	
 	environment {
         CI = 'true' 
+		ENV CHROME_BIN=/usr/bin/chromium-browser
     }
 
     stages {
