@@ -27,7 +27,7 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				sh 'sudo apt-get install google-chrome-stable'
+				sh 'apt-get install google-chrome-stable'
 				sh 'npm prune'
 				sh 'npm test'
             }
