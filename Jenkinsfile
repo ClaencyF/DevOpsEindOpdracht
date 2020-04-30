@@ -8,6 +8,7 @@ pipeline {
 	
 	environment {
         CI = 'true' 
+		CHROME_BIN=/usr/bin/chromium-browser
     }
 
     stages {
