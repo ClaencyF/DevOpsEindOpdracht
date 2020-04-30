@@ -27,6 +27,8 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
+				env.NODE_ENV = "test"
+				sh 'npm prune'
 				sh 'npm test'
             }
 		}
