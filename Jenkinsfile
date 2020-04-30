@@ -15,7 +15,6 @@ pipeline {
             steps {
 				echo "Installing dependencies."
 				sh 'npm install'
-				sh 'npm install -g mocha'
             }
         }
 		  stage('Build') { 
@@ -28,7 +27,7 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
-				sh 'npm run test-jenkins'
+				sh 'npm test'
             }
 		}
 	}
