@@ -1,7 +1,5 @@
 FROM node:11.0-alpine
 
-EXPOSE 3000:3000
-
 # Installs latest Chromium package
 RUN apk update && apk upgrade && \
     echo @edge http://nl.alpinelinux.org/alpine/edge/community >> /etc/apk/repositories && \
