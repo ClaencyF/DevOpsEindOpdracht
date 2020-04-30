@@ -8,7 +8,6 @@ pipeline {
 	
 	environment {
         CI = 'true' 
-		env.NODE_ENV = "test"
     }
 
     stages {
@@ -28,6 +27,7 @@ pipeline {
 		 stage('Testing') { 
             steps {
 				echo "Testing the solution."
+				sh 'sudo apt-get install google-chrome-stable'
 				sh 'npm prune'
 				sh 'npm test'
             }
