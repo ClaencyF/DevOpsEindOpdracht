@@ -1,0 +1,10 @@
+- name: Create test container
+   docker_container:
+    name: cltest
+    image:node
+
+- name: add container to inventory
+   name: cltest
+   ansible_conncetion: docker
+
+

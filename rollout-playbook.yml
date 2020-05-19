@@ -1,0 +1,13 @@
+---
+- hosts: ProjectHosts
+  tasks:
+   - name: Copy Project
+     copy:
+      src: /home/claency/Project/
+      dest: ./tmp
+
+
+
+
+
+
